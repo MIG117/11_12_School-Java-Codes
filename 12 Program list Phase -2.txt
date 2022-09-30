@@ -1,0 +1,12 @@
+1. Palindrome_RECU
+2. Kaprekar Number
+3. GoldBach
+4. ROT13 (Repeated)
+5. Wondrous Square
+6. Queu
+7. Stack_char
+8. Date 1
+9. Date 2
+10. DDYYMM
+11. Diagnol Sort
+12. Inherit_Calculate
