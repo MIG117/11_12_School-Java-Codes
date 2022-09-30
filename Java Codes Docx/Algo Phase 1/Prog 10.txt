@@ -1,0 +1,40 @@
+Algorithm_saddle()
+==================
+Input: A matrix is given.
+Output: The saddle point of the matrix, otherwise suitable error message.
+Data Structure Used: A 2-D array say 'arr[][]' is used to represent the matrix.
+
+Steps
+=====
+1.	Begin
+	Set c := 0
+	Set f := 0
+2.	For i = 0 to n
+	Begin
+		Set min := arr[i][0]
+		Set c := 0
+3		For j = 0 to n
+		Begin
+4.			If arr[i][j] < min then
+			Set min := arr[i][j]
+			Set c := j
+			  End If
+				Set j := j + 1
+			End For
+		Set max := arr[0][c]
+5.		For k = 0 to n
+		Begin
+6.			If arr[k][c] > max then
+			Set max := arr[k][c]
+			End If
+			Set k := k + 1
+		End For
+7.		If max = min then
+			Print "Saddle Point"
+			Set f := 1
+			End If
+		End For
+8.		If f = 0 then
+			Print "No saddle point present"
+			End If
+9.		End

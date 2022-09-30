@@ -1,0 +1,27 @@
+Algorithm_ROT13
+===============
+Input: A string or a word to be encrypted within 100 characters.
+Output: The encrypted word otherwise suitable error message.
+Data Structure Used: An array say 'str[]' is used to store the string or word.
+
+Steps
+=====
+1.	Begin
+2.	If l > 3 AND l < 100 then
+2.1.		For i = 0 to l
+		Begin
+			Set ch := str[i]
+2.2 .			If (ch >= 'A' OR ch >= 'a') AND (ch <= 'M' OR ch <='m') then
+				Set ch := ch + 13
+			Set str1 := str1 + ch
+2.3 .			ELSE If (ch >= 'N' OR ch >='n') AND (ch <= 'Z' OR ch <= 'z') then
+				Set ch := ch - 13
+			Set str1 := str1 + ch
+2.4 .			ELSE
+			Set str1 := str1 + ch
+			END If
+			Set i := i + 1
+		End For
+	End If
+3.	Process(str[])			//Process() is a procedure that traverses the array or the string.
+4.	End

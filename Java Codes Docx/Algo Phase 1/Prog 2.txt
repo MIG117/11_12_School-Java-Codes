@@ -1,0 +1,45 @@
+Algorithm_decl_to_word()
+========================
+Input: The number in decimal.
+Output: The number in words.
+Data Structure Used: An array say 'word[]' is used to store the words of the numbers such as 'ten, 'twenty', etc. with their repective positions.
+
+Steps
+=====
+1.	Begin                            
+2.      Set n1 := n
+3.	Set i := 4
+4.      While n1 > 0
+	Begin
+            a[--i] := n1 Mod 10
+            n1 := n1 / 10
+        End While
+
+5.      While i != 0 
+	Begin
+            a[--i] := 0
+        End While
+
+6.      If a[0] != 0 then
+            Print(word[a[0]-1])
+        End If
+7.      If a[1] != 0 then
+            Print(word[a[1]-1])
+        End If
+8.      If a[2] != 0 then
+            If a[2] >= 2 then
+                Print(word[a[2]+17])
+                If a[3] != 0 then
+                    Print(word[a[3]-1])
+		End If
+          End If 
+            End If
+            If a[2] =1 then
+                Print(word[a[3]+9])
+            End If
+9.      ELSE
+            If a[2] = 0 AND a[3] != 0
+                Print(word[a[3]-1])
+	    End IF
+	End ELSE
+10.    	End

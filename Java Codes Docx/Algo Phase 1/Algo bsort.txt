@@ -1,0 +1,24 @@
+Algorithm_sort()
+================
+Input: A set of elements say 'n' of size say 's'.
+Output: Elements in sorted order.
+Data Structure Used: A 1-D array say 'arr[]' is used to store the elements.
+
+Steps
+=====
+1.	Begin
+2.	For i = 0 to length(arr)
+	Begin
+2.1 	For j = 0 to length(arr)-i-1
+		Begin
+			If arr[j] > arr[j+1] then
+			Set temp := arr[j+1]
+			Set arr[j+1] := arr[j]
+			Set arr[j] := temp
+			End If
+			Set j := j + 1
+		End For
+		Set i := i + 1
+3.	End For
+4.	Process(arr[])			//Process() is a procedure that traverses the array.
+5.	End

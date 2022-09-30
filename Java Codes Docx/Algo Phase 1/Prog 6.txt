@@ -1,0 +1,33 @@
+Algorithm_encrypt()
+===================
+Input: The string or word to be encrypted and the shift value say 's'.
+Output: The encrypted string.
+Data Structure Used: NIL
+
+Steps
+=====
+1.		Begin
+2.		If s < 1 OR s > 26 then
+			Print "Invalid Shift Value"
+3.		Else
+3.1			Set l := length(str)		//length() is a procedure that gives the length of the array or a string.
+3.2.			For i = 0 to l
+			Begin
+				Set ch := str[i]
+				Set a := ch + s
+				If a = 'Q' then
+				If str[i+1] + s = 'Q' AND i < 1 then
+					Set a := 32
+					Set i := i + 1
+					End If
+				End If
+3.3.				If a > 90 then
+    					a := a - 26
+				End If
+3.4.				Set str2 := str2 + a
+3.5.				Set i := i + 1
+			End For
+		End If
+4.			show()
+5.		Process(str[])			//Process() is a procedure that traverses the array or the string.
+6.		End		

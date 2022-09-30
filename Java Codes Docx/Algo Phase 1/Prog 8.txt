@@ -1,0 +1,44 @@
+Algorithm_Sentence_Sort()
+=========================
+Input: A sentence whose words are to be sorted in alphabetical order.
+Output: The sentence whose words are sorted in alphabetical order.
+Data Structure Used: An array say 'str[]' has been used to store the sentence.
+
+Steps
+=====
+1.	Begin
+2.	Set l := length(str[])		//length() is a procedure which gives the length of an array or a string.
+3.	For a = 0 to l
+	Begin
+3.1.		If str[a] != ' ' AND str[a] != '.' then
+				Set temp := temp + str[a]
+3.2.		ELSE
+				Set n := n + 1
+				Set word[n] := temp
+				Set temp := ''
+		End If
+		Set a := a + 1
+	End For
+4.	For i = 0 to n-1
+	Begin
+4.1.		For j = i + 1 to n
+		Begin
+4.2.			If length(word[i]) < length(word[j]) then
+			Set temp := word[i]
+			Set word[i] := word[j]
+			Set word[j] := temp
+			End If
+			Set j := j + 1
+			End For
+4.3.		If length(word[i]) = length(word[j]) then
+4.4.			If (length(word[i]) - length(word[j])) > 0 then
+			Set temp := word [i]
+			Set word[i] := word[j]
+			Set word[j] := temp
+			End If
+		End If
+		Set i := i + 1
+	End For
+5.	Process(str[])			//Process() is a procedure which traverses the array or the string.
+6. show()
+7.	End

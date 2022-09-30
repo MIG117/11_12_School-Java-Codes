@@ -1,0 +1,40 @@
+Algorithm_SumPrimeFact()
+=================
+Input: A number say 'n' is given.
+Output: Display of the number is a smith number, otherwise display suitable error message.
+Data Structure Used: Nil.
+
+Steps
+=====
+1.	Begin
+	Set i := 2
+	Set sum := 0
+2.	While n > 1
+	Begin
+2.1		If n mod i = 0 then
+			Set sum := sum + SumDigit(i)	//SumDigit Procedure is given below.
+			Set n := n / 1
+2.2		ELSE
+			Set i := i + 1
+3.		End If
+4.	End While
+5.	End
+
+Algorithm_SumDigit()
+====================
+Input: A number say 'n' is given input from the smith() procedure.
+Output: The sum of the digits of the given number.
+Data Structure Used: Nil.
+
+Steps
+=====
+1.	Begin
+	Set s := 0
+2.	While n > 0
+	Begin
+		Set r:= n Mod 10
+		Set s:= s + r
+		Set n:= n / 10
+3.	End While
+4.	Return s
+5.	End

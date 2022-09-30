@@ -1,0 +1,78 @@
+Algorithm_insert()
+==================
+Input: A list of elements say 'n' and a single element say 'ele' and its position say 'pos'.
+Output: A list of elements with the desired element inserted in the list.
+Data Structure Used: An array say 'arr[]' and another array say 'arr2[]' is used.
+
+Steps
+=====
+1.		Begin
+2.		For i = 1 to length(arr)	//length() is a procedure that calculates the length of an array.
+		Begin
+			arr2[i] := arr[i]
+			Set i := i + 1
+		End For
+3.		For i = n-1 to pos-1
+		Begin
+			arr2[i+1] := arr2[i]
+			Set i := i - 1
+		End For
+4.		Set arr2[pos-1] := ele
+5.		Process(arr[])			//Process() is a procedure that traverses the array.
+6.		End
+
+Algorithm_delete()
+==================
+Input: A list of elements say 'n' and a position say 'pos' to be deleted.
+Output: The list without the element that is to be deleted.
+Data Structure Used: An array say 'arr[]' and another array say 'arr2[]' is used.
+
+Steps
+=====
+1.		Begin
+		Set n = length(arr)			//length() is a procedure that calculates the length of an array.
+2.		For i = 0 to n
+		Begin
+			arr2[i] := arr[i]
+		End For
+3.		For i = pos to n
+		Begin
+			arr2[i-1] := arr2[i]
+			Set i := i + 1
+			Set n := n - 1
+		End For
+4.		Process(arr2[])				//Process() is a procedure that traverses the array.
+5.		End
+
+Algorithm_search()
+==================
+Input: A list of elements say 'n' in a sorted order and a search key say 'ns' to be searched.
+Output: The element searched at its first occurence and its position of occurence. Otherwise suitable error message.
+Data Structure Used: An array say 'arr[]' is used.
+
+Steps
+=====
+1.		Begin
+2.		Set lb := 0
+3.		Set ub := length(arr) - 1
+4.		While lb <= ub
+		Begin
+			Set mid := (lb + ub) / 2
+			If arr[mid] == ns then
+				Set k := 1
+				Break
+			End IF
+			If arr[mid] < ns then
+				Set lb := mid + 1
+			End If
+			If arr[MID] > ns then
+				Set ub := mid - 1
+			End If
+		End While
+			If k==1 then
+				Print("Search Found")
+			End If
+			Else 
+				Print("Search Not Found")
+			End Else	
+5.		End

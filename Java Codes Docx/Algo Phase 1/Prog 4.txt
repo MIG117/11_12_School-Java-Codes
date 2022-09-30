@@ -1,0 +1,22 @@
+Algorithm_binary_search(arr[], l, r, x)
+Input: A list of elements say 'n' in a sorted order and a search key say 'x'.
+Output: The element if found is printed alongwith its position otherwise display suitable error message.
+Data Structure Used: An array say 'arr[]' of size say 'n'.
+
+Steps
+=====
+1.	Begin
+2.	If r >= 1 AND l < length(arr) - 1	//length() is a procedure that gives the length of an array.
+	then
+2.1.		Set MID = 1 + (r - 1) / 2
+2.2.		If arr[MID] = x
+		then
+2.2.1.			Return MID
+		End IF
+2.3.		If arr[MID] > x then
+2.3.1.			Return binary_search(arr[], l, MID - 1, x)
+		End If
+2.4.		Return binary_search(arr[], l, mid + 1, x)
+	End If
+3.	Return -1
+4.	End
